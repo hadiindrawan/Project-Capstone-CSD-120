@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* common */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F4F4F4;
+}
+form input {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: block;
+}
+
+@media only screen and (min-width: 720px) {
+    .form {
+        width: 50%;
+    }
+}
