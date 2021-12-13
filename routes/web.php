@@ -22,6 +22,4 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('auth/register');
 });
-Route::get('/data/ambulance', function () {
-    return view('data-master/ambulance');
-});
+Route::get('/data/ambulance', 'App\Http\Controllers\api\data_Ambulans@index');

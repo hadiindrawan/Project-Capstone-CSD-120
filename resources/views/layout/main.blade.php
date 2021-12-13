@@ -51,8 +51,9 @@
                                             aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
                                                 <ul>
-                                                    <li class="mb-2"><i class="fa fa-table"
-                                                            aria-hidden="true"></i>Data Ambulans
+                                                    <li class="mb-2"><a href="/data/ambulance"><i
+                                                                class="fa fa-table" aria-hidden="true"></i>Data
+                                                            Ambulans</a>
                                                     </li>
                                                     <li class="mb-2"><i class="fa fa-table"
                                                             aria-hidden="true"></i>Data Mobil
