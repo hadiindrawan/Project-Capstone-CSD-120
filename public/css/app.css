@@ -10,17 +10,21 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #F4F4F4;
+    font-size: 1.1rem;
 }
+
 form input {
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     display: block;
 }
+
 .container-sidebar {
     width: 20%;
     transition: all 0.2s ease;
     height: 100vh;
 }
+
 .container-main {
     /* Take the remaining width */
     flex: 1;
@@ -31,16 +35,54 @@ form input {
     margin: 15px 15px 15px 0;
     border-radius: 20px;
 }
+
 .container-flex {
     display: flex;
     height: 100%;
 }
+
 ul {
     text-decoration: none;
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
+
+/* sidbar */
+.sidebar-title {
+    font-weight: 700;
+}
+
+.sidebar-label {
+    padding-left: 8px;
+    margin: 10px 0;
+}
+
+.accordion-button {
+    font-size: 1.1rem;
+}
+
+/* table */
+.table-title {
+    font-weight: 600;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.table-header {
+
+    color: white;
+
+    background: linear-gradient(270.62deg, #1289FF -25.07%, #A0B304 103.72%);
+    /* s1 */
+
+    box-shadow: 0px 7px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
+
+
 @media only screen and (min-width: 720px) {
     .form {
         width: 50%;
@@ -51,3 +93,4 @@ ul {
 .accordion-button {
     padding: 10px 6px;
 }
+
