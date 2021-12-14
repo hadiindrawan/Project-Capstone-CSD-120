@@ -32,10 +32,17 @@
                 <div class="row">
                     <div class="col-12 mt-4">
                         <div class="title text-center">
+
                             <h5 class="sidebar-title">Proyek Akhir</h5>
                         </div>
                         <ul class="mt-5">
                             <li class="mb-2 sidebar-label"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</li>
+
+                            <h5>Proyek Akhir</h5>
+                        </div>
+                        <ul class="mt-5">
+                            <li class="mb-2"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</li>
+
                             <li>
                                 <div class="accordion" id="accordionExample">
                                     <div class="accordion-item">
@@ -73,7 +80,11 @@
                                     </div>
                                 </div>
                             </li>
+
                             <li class="mr-2 sidebar-label"><i class="fa fa-cogs" aria-hidden="true"></i> Setting</li>
+
+                            <li class="mr-2"><i class="fa fa-cogs" aria-hidden="true"></i>Setting</li>
+
                         </ul>
                     </div>
                 </div>

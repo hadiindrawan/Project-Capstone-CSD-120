@@ -82,6 +82,7 @@ ul {
 
 
 
+
 @media only screen and (min-width: 720px) {
     .form {
         width: 50%;
@@ -92,3 +93,4 @@ ul {
 .accordion-button {
     padding: 10px 6px;
 }
+
