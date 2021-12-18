@@ -26,11 +26,13 @@ class data_mobilDamkar extends Controller
                 'flat_nomor' => 'required',
                 'wilayah' => 'required',
                 'status'     => 'required',
+                'foto'     => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
             ],
             [
                 'flat_nomor.required' => 'Masukkan Flat Nomor !',
                 'wilayah.required' => 'Masukkan Wilayah !',
                 'status.required' => 'Masukkan Status Armada!',
+                'foto.required' => 'Masukkan Foto Armada!',
             ]
         );
 
@@ -42,11 +44,18 @@ class data_mobilDamkar extends Controller
                 'data'    => $validator->errors()
             ], 400);
         } else {
+            // save gambar
+            $gambar = $request->file('foto');
+            $nama_gambar = time() . "_" . $gambar->getClientOriginalName();
+            $dest = 'img/mobil-damkar';
+            $gambar->move($dest, $nama_gambar);
+
             $post = dataMobilDamkar::create([
                 'markas_id' => $request->input('markas_id'),
                 'flat_nomor'     => $request->input('flat_nomor'),
                 'wilayah'   => $request->input('wilayah'),
                 'status'   => $request->input('status'),
+                'foto'   => $nama_gambar,
             ]);
 
             if ($post) {
