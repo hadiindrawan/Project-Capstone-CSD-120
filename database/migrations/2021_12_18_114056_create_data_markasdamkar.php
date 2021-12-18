@@ -16,12 +16,12 @@ class CreateDataMarkasdamkar extends Migration
         Schema::create('data_markasdamkar', function (Blueprint $table) {
             $table->increments('id');
             $table->text('nama');
-            $table->string('wilayah');
-            $table->integer('jumlah_armada');
-            $table->integer('jumlah_personil');
+            $table->string('wilayah')->nullable();
+            $table->integer('jumlah_armada')->nullable();
+            $table->integer('jumlah_personil')->nullable();
             $table->double('lat');
             $table->double('long');
-            $table->text('foto');
+            $table->text('foto')->nullable();
             $table->timestamps();
         });
     }

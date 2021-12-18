@@ -15,11 +15,11 @@ class CreateDataDamkar extends Migration
     {
         Schema::create('data_damkar', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('markas_id');
+            $table->integer('markas_id')->nullable();
             $table->text('flat_nomor');
-            $table->string('wilayah');
+            $table->string('wilayah')->nullable();
             $table->string('status');
-            $table->text('foto');
+            $table->text('foto')->nullable();
             $table->timestamps();
         });
     }

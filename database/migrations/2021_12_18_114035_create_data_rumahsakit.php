@@ -16,13 +16,14 @@ class CreateDataRumahsakit extends Migration
         Schema::create('data_rumahsakit', function (Blueprint $table) {
             $table->increments('id');
             $table->text('nama');
-            $table->string('wilayah');
-            $table->integer('jumlah_kamar');
-            $table->integer('jumlah_ambulan');
-            $table->integer('kamar_kosong');
+            $table->string('wilayah')->nullable();
+            $table->text('alamat')->nullable();
+            $table->integer('jumlah_kamar')->nullable();
+            $table->integer('jumlah_ambulan')->nullable();
+            $table->integer('kamar_kosong')->nullable();
             $table->double('lat');
             $table->double('long');
-            $table->text('foto');
+            $table->text('foto')->nullable();
             $table->timestamps();
         });
     }
