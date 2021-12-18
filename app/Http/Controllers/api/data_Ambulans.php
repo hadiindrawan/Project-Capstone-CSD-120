@@ -23,14 +23,16 @@ class data_Ambulans extends Controller
         $validator = Validator::make(
             $request->all(),
             [
-                'nama' => 'required',
-                'kategori' => 'required',
-                'instansi'     => 'required',
+                'flat_nomor' => 'required',
+                'wilayah' => 'required',
+                'status'     => 'required',
+                'foto'     => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
             ],
             [
-                'nama.required' => 'Masukkan Nama Petani !',
-                'kategori.required' => 'Masukkan Luas Lahan Petani !',
-                'instansi.required' => 'Masukkan Tanggal Join Ahli Petani !',
+                'flat_nomor.required' => 'Masukkan Masukan Flat Nomor !',
+                'wilayah.required' => 'Masukkan Wilayah !',
+                'status.required' => 'Masukkan Status Ambulan !',
+                'foto.required' => 'Masukkan Foto Ambulan !',
             ]
         );
 
@@ -42,11 +44,18 @@ class data_Ambulans extends Controller
                 'data'    => $validator->errors()
             ], 400);
         } else {
+            // save gambar
+            $gambar = $request->file('foto');
+            $nama_gambar = time() . "_" . $gambar->getClientOriginalName();
+            $dest = 'img/ambulan';
+            $gambar->move($dest, $nama_gambar);
+
             $post = dataAmbulans::create([
-                'id' => random_int(1, 1000),
-                'nama'     => $request->input('nama'),
-                'kategori'   => $request->input('kategori'),
-                'instansi'   => $request->input('instansi'),
+                'rumahsakit_id' => $request->input('rumahsakit_id'),
+                'flat_nomor'     => $request->input('flat_nomor'),
+                'wilayah'   => $request->input('wilayah'),
+                'status'   => $request->input('status'),
+                'foto'   => $nama_gambar,
             ]);
 
 
