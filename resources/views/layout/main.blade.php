@@ -10,16 +10,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-        integrity="sha512-xodZBNTC5n1GV9Jm2u7rmsCe65wKzPTw5jtS38n2tVEGidbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-        crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-        integrity="sha512-XQRFi3dgfSVKpc1B9idTEuN3cBScszNHP9sw5jtS38n2tVEGi8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <style>
+    <style type="text/css">
         .fa-table {
             padding-right: 8px;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
         }
 
     </style>
@@ -36,13 +38,8 @@
                             <h5 class="sidebar-title">Proyek Akhir</h5>
                         </div>
                         <ul class="mt-5">
-                            <li class="mb-2 sidebar-label"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</li>
-
-                            <h5>Proyek Akhir</h5>
-                        </div>
-                        <ul class="mt-5">
-                            <li class="mb-2"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</li>
-
+                            <li class="mb-2"><a href="/"><i class="fa fa-home" aria-hidden="true"></i>
+                                    Dashboard</a></li>
                             <li>
                                 <div class="accordion" id="accordionExample">
                                     <div class="accordion-item">
@@ -81,10 +78,8 @@
                                 </div>
                             </li>
 
-                            <li class="mr-2 sidebar-label"><i class="fa fa-cogs" aria-hidden="true"></i> Setting</li>
-
-                            <li class="mr-2"><i class="fa fa-cogs" aria-hidden="true"></i>Setting</li>
-
+                            <li class="mr-2 sidebar-label"><i class="fa fa-cogs" aria-hidden="true"></i> Setting
+                            </li>
                         </ul>
                     </div>
                 </div>
