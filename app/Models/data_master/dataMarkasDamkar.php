@@ -8,6 +8,6 @@ class dataMarkasDamkar extends Model
 {
     protected $table = "data_markasdamkar";
     protected $fillable = [
-        'nama', 'wilayah', 'jumlah_armada', 'jumlah_personil', 'lat', 'long', 'foto'
+        'nama', 'wilayah', 'alamat', 'jumlah_armada', 'jumlah_personil', 'lat', 'long', 'foto'
     ];
 }
