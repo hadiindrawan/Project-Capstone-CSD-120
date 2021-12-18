@@ -9,11 +9,6 @@
                     <h5 class="table-title">@yield('title')</h5>
                 </div>
                 <table class="table mt-5">
-                    <thead class="table-header">
-
-                    <h5>@yield('title')</h5>
-                </div>
-                <table class="table mt-5">
                     <thead class="table-dark">
 
                         <th>ID</th>
