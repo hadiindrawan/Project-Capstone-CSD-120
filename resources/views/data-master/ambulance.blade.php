@@ -1,5 +1,5 @@
 @extends('layout.main')
-@section('title', 'Data Ambulans')
+@section('title', 'Data Ambulan')
 @section('isi')
     <div class="container">
         <div class="row">
@@ -12,6 +12,7 @@
                     <thead class="table-dark">
 
                         <th>ID</th>
+                        <th>Rumah Sakit ID</th>
                         <th>Nomor Plat</th>
                         <th>Wilayah</th>
                         <th>Status</th>
@@ -20,6 +21,7 @@
                         @foreach ($dataAmbulan as $data)
                             <tr>
                                 <td>{{ $data->id }}</td>
+                                <td>{{ $data->rumahsakit_id }}</td>
                                 <td>{{ $data->flat_nomor }}</td>
                                 <td>{{ $data->wilayah }}</td>
                                 <td>{{ $data->status }}</td>

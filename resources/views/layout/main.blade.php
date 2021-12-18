@@ -55,22 +55,22 @@
                                             aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
                                                 <ul>
-                                                    <li class="mb-2"><a href="/data/ambulance"><i
+                                                    <li class="mb-2"><a href="/data/ambulan"><i
                                                                 class="fa fa-table" aria-hidden="true"></i>Data
                                                             Ambulans</a>
                                                     </li>
-                                                    <li class="mb-2"><i class="fa fa-table"
-                                                            aria-hidden="true"></i>Data Mobil
-                                                        Pemadam Kebakaran</li>
-                                                    <li class="mb-2"><i class="fa fa-table"
-                                                            aria-hidden="true"></i>Data Rumah
-                                                        Sakit</li>
-                                                    <li class="mb-2"><i class="fa fa-table"
-                                                            aria-hidden="true"></i>Data Dinas
-                                                        Kebakaran</li>
-                                                    <li class="mb-2"><i class="fa fa-table"
-                                                            aria-hidden="true"></i>Data Lalu
-                                                        Lintas</li>
+                                                    <li class="mb-2"><a href="/data/damkar"><i
+                                                                class="fa fa-table" aria-hidden="true"></i>Data Mobil
+                                                            Pemadam Kebakaran</a></li>
+                                                    <li class="mb-2"><a href="/data/rumah-sakit"><i
+                                                                class="fa fa-table" aria-hidden="true"></i>Data Rumah
+                                                            Sakit</a></li>
+                                                    <li class="mb-2"><a href="/data/markas-damkar"><i
+                                                                class="fa fa-table" aria-hidden="true"></i>Data Dinas
+                                                            Kebakaran</a></li>
+                                                    <li class="mb-2"><a><i class="fa fa-table"
+                                                                aria-hidden="true"></i>Data Lalu
+                                                            Lintas</a></li>
                                                 </ul>
                                             </div>
                                         </div>
