@@ -8,6 +8,6 @@ class dataAmbulans extends Model
 {
     protected $table = "data_ambulans";
     protected $fillable = [
-        'flat_nomor', 'wilayah', 'status'
+        'flat_nomor', 'wilayah', 'status', 'foto'
     ];
 }
