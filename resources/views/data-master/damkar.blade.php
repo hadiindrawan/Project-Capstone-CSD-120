@@ -5,12 +5,11 @@
         <div class="row">
             <div class="col-12">
                 <div class="title mt-4 mb-3">
-
                     <h5 class="table-title">@yield('title')</h5>
                 </div>
-                <table class="table mt-5">
-                    <thead class="table-header">
 
+                <table class="table mt-5">
+                    <thead class="table-dark">  
                         <th>ID</th>
                         <th>Markas ID</th>
                         <th>Nomor Plat</th>
@@ -18,6 +17,7 @@
                         <th>Status</th>
                         <th>Foto</th>
                     </thead>
+                    
                     <tbody>
                         @foreach ($dataDamkar as $data)
                             <tr>

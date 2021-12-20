@@ -1,33 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@farisfarhann 
-hadiindrawan
-/
-Project-Capstone-CSD-120
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-1
-Wiki
-Security
-Insights
-Project-Capstone-CSD-120/resources/views/layout/main.blade.php
-@hadiindrawan
-hadiindrawan fix all view with the data from database
-Latest commit 29521b7 2 days ago
- History
- 2 contributors
-@hadiindrawan@farisfarhann
-99 lines (92 sloc)  5.28 KB
-   
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,7 +36,7 @@ Latest commit 29521b7 2 days ago
                             <h5 class="sidebar-title">Proyek Akhir</h5>
                         </div>
                         <ul class="mt-5">
-                            <li class="mb-2"><a href="/"><i class="fa fa-home" aria-hidden="true"></i>
+                            <li class="mb-2 sidebar-label"><a href="/"><i class="fa fa-home" aria-hidden="true"></i>
                                     Dashboard</a></li>
                             <li>
                                 <div class="accordion" id="accordionExample">
