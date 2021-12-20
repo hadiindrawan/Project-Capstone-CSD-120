@@ -12,17 +12,21 @@
                     <thead class="table-header">
 
                         <th>ID</th>
+                        <th>Markas ID</th>
                         <th>Nomor Plat</th>
                         <th>Wilayah</th>
                         <th>Status</th>
+                        <th>Foto</th>
                     </thead>
                     <tbody>
                         @foreach ($dataDamkar as $data)
                             <tr>
                                 <td>{{ $data->id }}</td>
+                                <td>{{ $data->markas_id }}</td>
                                 <td>{{ $data->flat_nomor }}</td>
                                 <td>{{ $data->wilayah }}</td>
                                 <td>{{ $data->status }}</td>
+                                <td>{{ $data->foto }}</td>
                             </tr>
                         @endforeach
                     </tbody>

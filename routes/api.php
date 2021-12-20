@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/data/rumah-sakit/store', 'api\data_rumahsakit@store');
+Route::post('/data/ambulan/store', 'api\data_Ambulans@store');
+Route::post('/data/damkar/store', 'api\data_mobilDamkar@store');
+Route::post('/data/markas-damkar/store', 'api\data_markasDamkar@store');

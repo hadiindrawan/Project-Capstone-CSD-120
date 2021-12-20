@@ -22,4 +22,7 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('auth/register');
 });
-Route::get('/data/ambulance', 'App\Http\Controllers\api\data_Ambulans@index');
+Route::get('/data/ambulan', 'api\data_Ambulans@index');
+Route::get('/data/damkar', 'api\data_mobilDamkar@index');
+Route::get('/data/markas-damkar', 'api\data_markasDamkar@index');
+Route::get('/data/rumah-sakit', 'api\data_rumahsakit@index');

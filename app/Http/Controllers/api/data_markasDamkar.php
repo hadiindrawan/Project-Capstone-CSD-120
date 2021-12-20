@@ -5,15 +5,15 @@ namespace App\Http\Controllers\api;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Controller;
-use App\Models\data_master\dataAmbulans;
+use App\Models\data_master\dataMarkasDamkar;
 
-class data_Ambulans extends Controller
+class data_markasDamkar extends Controller
 {
     public function index()
     {
-        $posts = dataAmbulans::all();
-        return view('data-master.ambulance', [
-            'dataAmbulan' => $posts
+        $posts = dataMarkasDamkar::all();
+        return view('data-master.markasDamkar', [
+            'dataMarkasDamkar' => $posts
         ]);
     }
 
@@ -23,16 +23,24 @@ class data_Ambulans extends Controller
         $validator = Validator::make(
             $request->all(),
             [
-                'flat_nomor' => 'required',
+                'nama' => 'required',
                 'wilayah' => 'required',
-                'status'     => 'required',
-                'foto'     => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
+                'alamat' => 'required',
+                'jumlah_armada'     => 'required',
+                'jumlah_personil'     => 'required',
+                'lat'     => 'required',
+                'long'     => 'required',
+                'foto'     => 'required',
             ],
             [
-                'flat_nomor.required' => 'Masukkan Masukan Flat Nomor !',
+                'nama.required' => 'Masukkan Nama Markas  !',
                 'wilayah.required' => 'Masukkan Wilayah !',
-                'status.required' => 'Masukkan Status Ambulan !',
-                'foto.required' => 'Masukkan Foto Ambulan !',
+                'alamat.required' => 'Masukkan Alamat !',
+                'jumlah_armada.required' => 'Masukkan Jumlah Armada!',
+                'jumlah_personil.required' => 'Masukkan Jumlah Personil!',
+                'lat.required' => 'Masukkan Lat!',
+                'long.required' => 'Masukkan Long!',
+                'foto.required' => 'Masukkan Foto Markas!',
             ]
         );
 
@@ -47,27 +55,29 @@ class data_Ambulans extends Controller
             // save gambar
             $gambar = $request->file('foto');
             $nama_gambar = time() . "_" . $gambar->getClientOriginalName();
-            $dest = 'img/ambulan';
+            $dest = 'img/markas-damkar';
             $gambar->move($dest, $nama_gambar);
 
-            $post = dataAmbulans::create([
-                'rumahsakit_id' => $request->input('rumahsakit_id'),
-                'flat_nomor'     => $request->input('flat_nomor'),
+            $post = dataMarkasDamkar::create([
+                'nama'     => $request->input('nama'),
                 'wilayah'   => $request->input('wilayah'),
-                'status'   => $request->input('status'),
+                'alamat'   => $request->input('alamat'),
+                'jumlah_armada'   => $request->input('jumlah_armada'),
+                'jumlah_personil'   => $request->input('jumlah_personil'),
+                'lat'   => $request->input('lat'),
+                'long'   => $request->input('long'),
                 'foto'   => $nama_gambar,
             ]);
-
 
             if ($post) {
                 return response()->json([
                     'success' => true,
-                    'message' => 'dataAmbulans Berhasil Disimpan!',
+                    'message' => 'dataMarkasDamkar Berhasil Disimpan!',
                 ], 200);
             } else {
                 return response()->json([
                     'success' => false,
-                    'message' => 'dataAmbulans Gagal Disimpan!',
+                    'message' => 'dataMarkasDamkar Gagal Disimpan!',
                 ], 400);
             }
         }
@@ -76,18 +86,18 @@ class data_Ambulans extends Controller
 
     public function show($id)
     {
-        $post = dataAmbulans::whereId($id)->first();
+        $post = dataMarkasDamkar::whereId($id)->first();
 
         if ($post) {
             return response()->json([
                 'success' => true,
-                'message' => 'Detail dataAmbulans!',
+                'message' => 'Detail dataMarkasDamkar!',
                 'data'    => $post
             ], 200);
         } else {
             return response()->json([
                 'success' => false,
-                'message' => 'dataAmbulans Tidak Ditemukan!',
+                'message' => 'dataMarkasDamkar Tidak Ditemukan!',
                 'data'    => ''
             ], 404);
         }
@@ -119,7 +129,7 @@ class data_Ambulans extends Controller
             ], 400);
         } else {
 
-            $post = dataAmbulans::whereId($request->input('id'))->update([
+            $post = dataMarkasDamkar::whereId($request->input('id'))->update([
                 'nama'     => $request->input('nama'),
                 'kategori'   => $request->input('kategori'),
                 'instansi'   => $request->input('instansi'),
@@ -129,12 +139,12 @@ class data_Ambulans extends Controller
             if ($post) {
                 return response()->json([
                     'success' => true,
-                    'message' => 'dataAmbulans Berhasil Diupdate!',
+                    'message' => 'dataMarkasDamkar Berhasil Diupdate!',
                 ], 200);
             } else {
                 return response()->json([
                     'success' => false,
-                    'message' => 'dataAmbulans Gagal Diupdate!',
+                    'message' => 'dataMarkasDamkar Gagal Diupdate!',
                 ], 500);
             }
         }
@@ -142,18 +152,18 @@ class data_Ambulans extends Controller
 
     public function destroy($id)
     {
-        $post = dataAmbulans::findOrFail($id);
+        $post = dataMarkasDamkar::findOrFail($id);
         $post->delete();
 
         if ($post) {
             return response()->json([
                 'success' => true,
-                'message' => 'dataAmbulans Berhasil Dihapus!',
+                'message' => 'dataMarkasDamkar Berhasil Dihapus!',
             ], 200);
         } else {
             return response()->json([
                 'success' => false,
-                'message' => 'dataAmbulans Gagal Dihapus!',
+                'message' => 'dataMarkasDamkar Gagal Dihapus!',
             ], 500);
         }
     }
