@@ -11,11 +11,11 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-        integrity="sha512-xodZBNTC5n1GV9Jm2u7rmsCe65wKzPTw5jtS38n2tVEGidbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-        crossorigin="" />
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-        integrity="sha512-XQRFi3dgfSVKpc1B9idTEuN3cBScszNHP9sw5jtS38n2tVEGi8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-        crossorigin="anonymous"></script>
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <style>
         .fa-table {
@@ -36,12 +36,9 @@
                             <h5 class="sidebar-title">Proyek Akhir</h5>
                         </div>
                         <ul class="mt-5">
-                            <li class="mb-2 sidebar-label"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</li>
-
-                            <h5>Proyek Akhir</h5>
-                        </div>
-                        <ul class="mt-5">
-                            <li class="mb-2"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</li>
+                            <li class="mb-2 sidebar-label">
+                                <a href="/"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a>
+                            </li>
 
                             <li>
                                 <div class="accordion" id="accordionExample">
@@ -62,18 +59,22 @@
                                                                 class="fa fa-table" aria-hidden="true"></i>Data
                                                             Ambulans</a>
                                                     </li>
-                                                    <li class="mb-2"><i class="fa fa-table"
-                                                            aria-hidden="true"></i>Data Mobil
-                                                        Pemadam Kebakaran</li>
-                                                    <li class="mb-2"><i class="fa fa-table"
-                                                            aria-hidden="true"></i>Data Rumah
-                                                        Sakit</li>
-                                                    <li class="mb-2"><i class="fa fa-table"
-                                                            aria-hidden="true"></i>Data Dinas
-                                                        Kebakaran</li>
-                                                    <li class="mb-2"><i class="fa fa-table"
-                                                            aria-hidden="true"></i>Data Lalu
-                                                        Lintas</li>
+                                                    <li class="mb-2"><a href="/data/damkar"><i
+                                                                class="fa fa-table" aria-hidden="true"></i>Data
+                                                            Mobil Pemadam Kebakaran</a>
+                                                    </li>
+                                                    <li class="mb-2"><a href="/data/rumahsakit"><i
+                                                                class="fa fa-table" aria-hidden="true"></i>Data
+                                                            Rumah sakit</a>
+                                                    </li>
+                                                    <li class="mb-2"><a href="/data/ambulance"><i
+                                                                class="fa fa-table" aria-hidden="true"></i>Data
+                                                            Dinas Pemadam Kebakaran</a>
+                                                    </li>
+                                                    <li class="mb-2"><a href="/data/ambulance"><i
+                                                                class="fa fa-table" aria-hidden="true"></i>Data
+                                                            Lalu Lintas</a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -81,9 +82,9 @@
                                 </div>
                             </li>
 
-                            <li class="mr-2 sidebar-label"><i class="fa fa-cogs" aria-hidden="true"></i> Setting</li>
-
-                            <li class="mr-2"><i class="fa fa-cogs" aria-hidden="true"></i>Setting</li>
+                            <li class="mr-2 sidebar-label">
+                                <a href="/setting"><i class="fa fa-cogs" aria-hidden="true"></i> Setting</a>
+                            </li>
 
                         </ul>
                     </div>

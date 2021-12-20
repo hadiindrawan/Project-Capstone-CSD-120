@@ -1,19 +1,21 @@
 @extends('layout.main')
-@section('title', 'Data Markas')
+@section('title', 'Data Dinas Pemadam Kebakaran')
 @section('isi')
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="title mt-4 mb-3">
-                    <h5>@yield('title')</h5>
+                    <h5 class="table-title">@yield('title')</h5>
                 </div>
+
                 <table class="table mt-5">
-                    <thead class="table-dark">
+                    <thead class="table-header">
                         <th>ID</th>
-                        <th>Nama Markas</th>
+                        <th>Nomor Plat</th>
                         <th>Wilayah</th>
-                        <th>Alamat</th>
+                        <th>Status</th>
                     </thead>
+
                     <tbody>
                         @foreach ($dataMarkas as $data)
                             <tr>
