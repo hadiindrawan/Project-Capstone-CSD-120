@@ -58,9 +58,28 @@ ul {
     margin: 10px 0;
 }
 
+.sidebar-label a {
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar-label a:hover {
+    color: #0c63e4;
+}
+
 .accordion-button {
     font-size: 1.1rem;
 }
+
+.accordion-body ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.accordion-body ul li a:hover {
+    color: #0c63e4;
+}
+
 
 /* table */
 .table-title {
@@ -73,11 +92,18 @@ ul {
 
     color: white;
 
-    background: linear-gradient(270.62deg, #1289FF -25.07%, #A0B304 103.72%);
+    background: linear-gradient(270.62deg, #0c63e4 -25.07%, #A0B304 103.72%);
     /* s1 */
 
     box-shadow: 0px 7px 30px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+}
+
+/* Map */
+
+#map {
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -93,4 +119,3 @@ ul {
 .accordion-button {
     padding: 10px 6px;
 }
-

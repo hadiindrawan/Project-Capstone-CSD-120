@@ -18,12 +18,10 @@
         .fa-table {
             padding-right: 8px;
         }
-
         #map {
             width: 100%;
             height: 100%;
         }
-
     </style>
 </head>
 
@@ -38,7 +36,7 @@
                             <h5 class="sidebar-title">Proyek Akhir</h5>
                         </div>
                         <ul class="mt-5">
-                            <li class="mb-2"><a href="/"><i class="fa fa-home" aria-hidden="true"></i>
+                            <li class="mb-2 sidebar-label"><a href="/"><i class="fa fa-home" aria-hidden="true"></i>
                                     Dashboard</a></li>
                             <li>
                                 <div class="accordion" id="accordionExample">
