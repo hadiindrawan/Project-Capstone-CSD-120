@@ -17,6 +17,7 @@ class CreateDataMarkasdamkar extends Migration
             $table->increments('id');
             $table->text('nama');
             $table->string('wilayah')->nullable();
+            $table->string('alamat')->nullable();
             $table->integer('jumlah_armada')->nullable();
             $table->integer('jumlah_personil')->nullable();
             $table->double('lat');

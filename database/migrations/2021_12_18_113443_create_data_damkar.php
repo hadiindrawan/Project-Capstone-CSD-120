@@ -19,6 +19,8 @@ class CreateDataDamkar extends Migration
             $table->text('flat_nomor');
             $table->string('wilayah')->nullable();
             $table->string('status');
+            $table->double('lat');
+            $table->double('lng');
             $table->text('foto')->nullable();
             $table->timestamps();
         });
