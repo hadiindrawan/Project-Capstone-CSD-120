@@ -17,6 +17,16 @@ class data_rumahSakit extends Controller
         ]);
     }
 
+    public function getData()
+    {
+        $posts = dataRumahSakit::all();
+        return response([
+            'success' => true,
+            'message' => 'List Semua Rumah Sakit',
+            'data' => $posts
+        ], 200);
+    }
+
     public function store(Request $request)
     {
         //validate data
