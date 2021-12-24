@@ -2,3 +2,7 @@
 
 
 Darurat.id dibuat untuk membantu operasional kendaraan darurat seperti mobil ambulans dan mobil pemadam kebakaran. Rencananya Darurat.id memiliki 2 aplikasi, website dan mobile apps. Aplikasi website dibuat untuk memonitor kendaraan darurat, antara lain lokasi, tujuan, melancarkan jalannya kendaraan tersebut dengan mengatur lampu lalu lintas, dan data-data lainnya. Lalu aplikasi mobile apps diperuntukan bagi user untuk memanggil kendaraan darurat, dan untuk driver mengirim sinyal agar kendaraannya dapat dimonitor. Tetapi yang dapat terealisasikan baru pada sisi website saja. Website yang telah kami bangun memuat data-data ambulans, mobil pemadam kebakaran, rumah sakit, dan dinas pemadam kebakaran.
+
+Akses ke website:
+link http://darurat.my.id/
+Login menggunakan email test@email.com dan password 12341234
