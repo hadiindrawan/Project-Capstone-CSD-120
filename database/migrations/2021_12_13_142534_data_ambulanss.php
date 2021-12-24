@@ -19,6 +19,8 @@ class DataAmbulanss extends Migration
             $table->text('flat_nomor');
             $table->text('wilayah');
             $table->text('status');
+            $table->double('lat');
+            $table->double('lng');
             $table->text('foto');
             $table->timestamps();
         });

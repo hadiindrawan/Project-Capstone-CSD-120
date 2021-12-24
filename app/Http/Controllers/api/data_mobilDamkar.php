@@ -17,6 +17,16 @@ class data_mobilDamkar extends Controller
         ]);
     }
 
+    public function getData()
+    {
+        $posts = dataMobilDamkar::all();
+        return response([
+            'success' => true,
+            'message' => 'List Semua Rumah Sakit',
+            'data' => $posts
+        ], 200);
+    }
+
     public function store(Request $request)
     {
         //validate data
@@ -55,6 +65,8 @@ class data_mobilDamkar extends Controller
                 'flat_nomor'     => $request->input('flat_nomor'),
                 'wilayah'   => $request->input('wilayah'),
                 'status'   => $request->input('status'),
+                'lat'   => $request->input('lat'),
+                'lng'   => $request->input('lng'),
                 'foto'   => $nama_gambar,
             ]);
 

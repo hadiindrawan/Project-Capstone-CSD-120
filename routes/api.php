@@ -21,8 +21,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
 
-    Route::post('/data/rumah-sakit/store', 'api\data_rumahsakit@store');
+    Route::post('/data/rumah-sakit/store', 'api\data_rumahSakit@store');
     Route::post('/data/ambulan/store', 'api\data_Ambulans@store');
     Route::post('/data/damkar/store', 'api\data_mobilDamkar@store');
     Route::post('/data/markas-damkar/store', 'api\data_markasDamkar@store');
 });
+
+Route::get('/data/rumah-sakit/get', 'api\data_rumahSakit@getData')->name('getDataRS');
+Route::get('/data/ambulan/get', 'api\data_Ambulans@getData')->name('getDataAmbu');
+Route::get('/data/damkar/get', 'api\data_mobilDamkar@getData')->name('getDataMobilPK');
+Route::get('/data/markas-damkar/get', 'api\data_markasDamkar@getData')->name('getDataMarkas');
