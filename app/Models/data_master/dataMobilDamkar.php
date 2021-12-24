@@ -8,6 +8,7 @@ class dataMobilDamkar extends Model
 {
     protected $table = "data_damkar";
     protected $fillable = [
-        'markas_id', 'flat_nomor', 'wilayah', 'status', 'foto'
+        'markas_id', 'flat_nomor', 'wilayah', 'status',
+        'lat', 'long', 'foto'
     ];
 }
