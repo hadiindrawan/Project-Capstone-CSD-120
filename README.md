@@ -6,4 +6,6 @@ Darurat.id dibuat untuk membantu operasional kendaraan darurat seperti mobil amb
 Akses ke website:
 link https://darurat.my.id/
 
-Login menggunakan email guest@mail.com dan password guest1234
+Login menggunakan:
+email    : guest@mail.com
+password : guest1234
